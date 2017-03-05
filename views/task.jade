@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    div.div2
+        h3 这是标题:#{mark}
+        h3 我叫:#{username}
+        h3 我的年龄是:#{age}
+        p 这是JS的格式:!{JSON.stringify(username)}
+        form(action="http://127.0.0.1:3000/process_get",method="post")#myform
+            span name
+            input(type="text" name="userName" placeholder="请出入姓名")
+            <br/>
+            span age
+            input(type="text" name="userAge" placeholder="请输入年龄")
+            <br/>
+            input(type="submit" value="提交")
+        img(src="/images/logo.jpg")
+//img(src="/images/member/error.png")
+
