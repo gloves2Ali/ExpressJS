@@ -2,12 +2,15 @@ extends layout
 
 block content
     div.div2
-        h1 这是测试
-        h3 这是标题:#{mark}
-        h3 我叫:#{username}
-        h3 我的年龄是:#{age}
-        p 这是JS的格式:!{JSON.stringify(username)}
-        form(action="http://127.0.0.1:3000/process_get",method="post")#myform
+        ul#Item
+          each s in schools
+            li 学生 #{s.students} 在#{s.room}教室,由#{s.teacher}教学指导
+        h1.title 这是测试
+        h3 这是标题:#{ mark }
+        h3 我叫:#{ username }
+        h3 我的年龄是:#{ age }
+        p 这是JS的格式:!{ JSON.stringify(username) }
+        form(action="",method="post")#myform
             span name
             input(type="text" name="userName" placeholder="请出入姓名")
             <br/>
@@ -16,5 +19,7 @@ block content
             <br/>
             input(type="submit" value="提交")
         img(src="/images/logo.jpg")
-//img(src="/images/member/error.png")
+block scripts
+    script(src='/javascript/public.js')
+
 
