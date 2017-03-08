@@ -6,5 +6,6 @@ $(function(){
             {"students":"Jack","room":"301","teacher":"Steven"},
             {"students":"Bob","room":"502","teacher":"James"}
         ];
+    var items ={"books": ["A", "B", "C"]};
     console.log(schools);
 });

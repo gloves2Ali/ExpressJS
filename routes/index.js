@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/tasks',function(req, res, next){
-  res.render('task', { mark: 'aaa',username:'jack',age:'25' });
+  res.render('task', { mark: 'aaa',username:'jack',age:'25',ip:req.ip });
 });
 
 module.exports = router;
