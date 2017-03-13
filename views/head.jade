@@ -1,9 +1,5 @@
-extends layout
-block stylesheet
-    link(rel='stylesheet', href='/stylesheets/head.css')
-block content
-    title= tltle
-    a.a1 测试
-
-block scripts
-    script(src="javascript/public.js")
+mixin headerTab(mold, sortitem, filteritem)
+    h3.div #{mold}
+    ul
+        each val,index in sortitem.data
+            li index
