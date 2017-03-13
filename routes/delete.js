@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* Post home page. */
 router.get('/delete',function(req, res, next) {
-    res.render('delete',{ marks:'Hello 德腾' });
+    res.render('delete',{ marks:'Hello the new routes' });
     //alert(11);
 });
 
