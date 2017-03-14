@@ -6,6 +6,7 @@ var app = express();
 router.get('/', function(req, res, next) {
   var mold = '酒店';
   var sortitem ={
+    "errorcode":"201",
     "data":[
         {
           "title":"酒店标题1",
@@ -14,7 +15,7 @@ router.get('/', function(req, res, next) {
           "price":2108,
           "location":["100","100"],
           "introduce":"no1.景区",
-          "notice":"预订须知预订须预知预订须知预订须知预订须知预订须知预订须知"
+          "notice":"这是第一条数据结尾"
         },
         {
           "title":"酒店标题2",

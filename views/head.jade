@@ -1,5 +1,25 @@
 mixin headerTab(mold, sortitem, filteritem)
     h3.div #{mold}
+    h3 #{sortitem.errorcode}
+    -if (sortitem.errorcode == 201)
+      +itemGroup(sortitem.data)
+    -else
+        h2 代码错误
+
+mixin itemGroup(item)
     ul
-        each val,index in sortitem.data
-            li index
+        -for(var i=0; i<item.length; ++i){
+            li #{sortitem.data[i].title}
+            li #{sortitem.data[i].subtitle}
+            li #{sortitem.data[i].price}
+            li #{sortitem.data[i].introduce}
+            li #{sortitem.data[i].notice}
+        -}
+    h2 each方式的遍历
+    ul
+        each val,index in item
+            li #{val.title}
+            li #{val.subtitle}
+            li #{val.price}
+            li #{val.introduce}
+            li #{val.notice}
