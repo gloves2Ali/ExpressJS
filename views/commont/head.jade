@@ -9,6 +9,8 @@ mixin headerTab(mold, sortitem, filteritem)
 mixin itemGroup(item)
     ul
         -for(var i=0; i<item.length; ++i){
+            each item in sortitem.data[i].mark
+                li #{item};
             li #{sortitem.data[i].title}
             li #{sortitem.data[i].subtitle}
             li #{sortitem.data[i].price}

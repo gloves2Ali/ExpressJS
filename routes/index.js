@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
         {
           "title":"酒店标题1",
           "subtitle":"酒店副标题1",
-          "mark":["酒店标签","酒店标签"],
+          "mark":["酒店标签1","酒店标签2"],
           "price":2108,
           "location":["100","100"],
           "introduce":"no1.景区",
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
         {
           "title":"酒店标题2",
           "subtitle":"酒店副标题2",
-          "mark":["酒店标签","酒店标签"],
+          "mark":["酒店标签a","酒店标签b"],
           "price":2108-2,
           "location":["100","100"],
           "introduce":"第二个景区",
