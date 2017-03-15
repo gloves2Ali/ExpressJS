@@ -9,16 +9,3 @@ a {
 .title{
   color:blue;
 }
-/* 拖动球 */
-.back_bar {
-  display:block;
-  width:32px;
-  height:32px;
-  background: url(/images/btn-back.png);
-  -webkit-background-size: cover;
-  background-size:cover;
-  position: fixed;
-  top:5%;
-  left:5%;
-  z-index:1001;
-}

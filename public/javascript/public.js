@@ -36,6 +36,7 @@ $(function(){
                 dy = dy || 0;
                 var offx = dx + ev.x + "px";
                 var offy = dy + ev.y + "px";
+                //console.log(offx+","+offy);
                 var adsorb = 8; // 距离屏幕边缘的边距，会被吸附到边缘
                 //检测是否到4个屏幕边缘
                 if(parseFloat(offx)+dot_w - pos_x + dot_w >= ww - adsorb){
