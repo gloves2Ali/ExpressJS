@@ -1,5 +1,13 @@
 extends layout
+//
+//block stylesheet
+//  link(rel='stylesheet', href='/stylesheets/head.css')
 
 block content
-  include head
+  include commont/head
+  include commont/removable
   +headerTab(mold,sortitem,filteritem)
+  +removable
+block scripts
+    script(src='/javascript/public.js')
+    script(src='/javascript/touch-0.2.14.min.js')

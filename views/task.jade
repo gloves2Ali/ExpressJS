@@ -4,7 +4,6 @@ block content
     div.div1
         button#Btn1 切换内容
     div.div2
-        include delete
         mixin link(href,name)
             a(class!=attributes.class,href=href)=name
         +link('/foo','foo')(class="btn")
