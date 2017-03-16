@@ -18,9 +18,6 @@ $(function(){
                     console.log('返回');
                 }
             });
-            touch.on(tar, 'touchstart', function(ev){
-                ev.preventDefault();
-            });
 
             var ww = $(window).width(); // 屏幕宽高
             var wh = $(window).height();
