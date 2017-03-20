@@ -1,5 +1,5 @@
 mixin headerTab(mold, sortitem, filteritem)
-    h3.div #{mold}
+    h3.div(data-mold=mold) data(mold)
     h3 #{sortitem.errorcode}
     -if (sortitem.errorcode == 201)
       +itemGroup(sortitem.data)
