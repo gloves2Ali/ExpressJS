@@ -1,24 +1,13 @@
-mixin headerTab(mold, sortitem, filteritem)
-    h3.div(data-mold=mold) data(mold)
+mixin headerTab(mold, sortitem)
+    h3#div(data-mold=mold) #{mold}
     h3 #{sortitem.errorcode}
     -if (sortitem.errorcode == 201)
       +itemGroup(sortitem.data)
     -else
         h2 代码错误
 
+
 mixin itemGroup(item)
-    h2 for方式的遍历
-    ul
-        -for(var i=0; i<item.length; ++i){
-            each items in sortitem.data[i].mark
-                li #{items};
-            li #{sortitem.data[i].title}
-            li #{sortitem.data[i].subtitle}
-            li #{sortitem.data[i].price}
-            li #{sortitem.data[i].introduce}
-            li #{sortitem.data[i].notice}
-        -}
-    h2 each方式的遍历
     ul
         each val,index in item
             each items in val.mark

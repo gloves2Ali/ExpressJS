@@ -5,9 +5,25 @@ block stylesheet
 
 block content
   include commont/head
+  include commont/list
   include commont/removable
-  +headerTab(mold,sortitem,filteritem)
+  a#app {{ message }}
+  +listTab(filteritem)
+  +headerTab(mold,sortitem)
   +removable
 block scripts
     script(src='/javascript/public.js')
     script(src='/javascript/touch-0.2.14.min.js')
+    script(src='/javascript/vue.js')
+    script.
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'vue双向绑定',
+                items: filteritem
+            },
+            ready: function() {
+                alert(this.items);
+            }
+        })
+
